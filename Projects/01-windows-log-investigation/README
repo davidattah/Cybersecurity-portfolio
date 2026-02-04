@@ -33,5 +33,4 @@ Investigation Walkthrough
 
 1) Identify Suspicious Process Execution (Sysmon Event ID 1)
 Evidence showed suspicious PowerShell execution.
-Projects/01-windows-log-investigation/screenshots/Full registry key of the USB device calling svchost.png
-
+https://github.com/davidattah/Cybersecurity-portfolio/blob/8b83663ca44239047590a5b3a6e6c45739b0959e/Projects/01-windows-log-investigation/screenshots/Full%20registry%20key%20of%20the%20USB%20device%20calling%20svchost.png
