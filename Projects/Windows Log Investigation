@@ -1,6 +1,6 @@
 Windows Log Investigation
 
-## Overview
+Overview
 This project documents a SOC-style investigation using **Sysmon logs** in a Windows environment.  
 The objective was to identify suspicious activity through process creation, network connections, and persistence indicators.
 
@@ -24,4 +24,6 @@ During analysis, suspicious behavior was observed involving:
 - Abnormal PowerShell execution
 - Potential command-and-control (C2) communication
 - Indicators consistent with post-exploitation activity
+
+Investigation Walkthrough
 
