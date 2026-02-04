@@ -1,7 +1,7 @@
-Windows Log Investigation 
+##Windows Log Investigation 
 
 
-Overview
+##Overview
 This project documents a SOC-style investigation using Sysmon logs in a Windows environment.  
 The objective was to identify suspicious activity through process creation, network connections, and persistence indicators.
 
@@ -32,10 +32,13 @@ During analysis, suspicious behavior was observed involving:
 Investigation Walkthrough
 
 1) Identify Suspicious Process Execution:
+
 Evidence showed suspicious PowerShell execution - 
+
 ![full_registry_key_usb_svchost.png](https://github.com/davidattah/Cybersecurity-portfolio/blob/main/Projects/01-windows-log-investigation/screenshots/full_registry_key_usb_svchost.png)
 
 Why it’s suspicious
+
 
 
 
