@@ -32,8 +32,10 @@ During analysis, suspicious behavior was observed involving:
 Investigation Walkthrough
 
 1) Identify Suspicious Process Execution:
-Evidence showed suspicious PowerShell execution - (screenshots/full_registry_key_usb_svchost.png)
+Evidence showed suspicious PowerShell execution - 
+![full_registry_key_usb_svchost.png](https://github.com/davidattah/Cybersecurity-portfolio/blob/main/Projects/01-windows-log-investigation/screenshots/full_registry_key_usb_svchost.png)
 
 Why it’s suspicious
+
 
 
