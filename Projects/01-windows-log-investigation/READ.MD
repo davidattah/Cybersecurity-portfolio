@@ -1,19 +1,19 @@
-##Windows Log Investigation 
+# Windows Log Investigation 
 
 
-##Overview
+## Overview
 This project documents a SOC-style investigation using Sysmon logs in a Windows environment.  
 The objective was to identify suspicious activity through process creation, network connections, and persistence indicators.
 
 
-Tools Used
+## Tools Used
 - Sysmon
 - Windows Event Viewer 
 - MITRE ATT&CK Framework
 - Powershell 
 - Microsoft Powershell Documentation 
 
-Key Sysmon Event IDs Used
+## Key Sysmon Event IDs Used
 - Event ID 1 – Process creation
 - Event ID 3 – Network connection
 - Event ID 7 – Image loaded
@@ -22,14 +22,14 @@ Key Sysmon Event IDs Used
 - Event ID 13 – Registry value set
 
 
-Investigation Summary
+## Investigation Summary
 During analysis, suspicious behavior was observed involving:
 - Abnormal PowerShell execution
 - Potential command-and-control (C2) communication
 - Indicators consistent with post-exploitation activity
 
 
-Investigation Walkthrough
+## Investigation Walkthrough
 
 1) Identify Suspicious Process Execution:
 
@@ -38,6 +38,7 @@ Evidence showed suspicious PowerShell execution -
 ![full_registry_key_usb_svchost.png](https://github.com/davidattah/Cybersecurity-portfolio/blob/main/Projects/01-windows-log-investigation/screenshots/full_registry_key_usb_svchost.png)
 
 Why it’s suspicious
+
 
 
 
