@@ -195,7 +195,6 @@ The destination IP address and connection pattern were not consistent with expec
 The process initiating the connection was not expected to communicate externally in this lab environment
 
 In addition to the network activity, further analysis revealed a registry modification associated with the same activity. The payload was stored under:
-
 HKLM\SOFTWARE\Microsoft\Network\Debug
 
 ![query_to_get_events](https://github.com/davidattah/Cybersecurity-portfolio/blob/main/Projects/01-windows-log-investigation/screenshots/query_to_get_registry_events.png)
@@ -214,7 +213,7 @@ A registry modification used to store payload data
 
 ![registry_event_2](https://github.com/davidattah/Cybersecurity-portfolio/blob/main/Projects/01-windows-log-investigation/screenshots/registry_event_2.png)
 
-strongly suggested malicious behavior and warranted deeper investigation.
+Strongly suggested malicious behavior and warranted deeper investigation.
 ### 📌 What I Learned
 
 How Sysmon records network connections
@@ -285,6 +284,7 @@ Analyze outbound network connections
 Correlate events into a meaningful timeline
 
 This investigation demonstrated how Sysmon provides detailed visibility into system activity and how analysts use that data to detect potential security threats.
+
 
 
 
