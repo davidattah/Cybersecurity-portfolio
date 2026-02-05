@@ -113,7 +113,7 @@ The full path of the exectuable
 
 This information helps determine whether a process was expected or unusual.
 
-![path_payload](https://github.com/davidattah/Cybersecurity-portfolio/blob/main/Projects/01-windows-log-investigation/screenshots/path_payload%20.png)
+![path_of_exectuable](https://github.com/davidattah/Cybersecurity-portfolio/blob/main/Projects/01-windows-log-investigation/screenshots/path_of_exectuable.png)
 
 ### 🔎 Step 2 — Identify the Suspicious Process
 
@@ -127,7 +127,7 @@ Its command-line usage
 
 Processes running from user-writable directories or unusual paths are often investigated further because malware frequently executes from these locations.
 
-📸 Screenshot: Suspicious process execution
+![Payload_masking](https://github.com/davidattah/Cybersecurity-portfolio/blob/main/Projects/01-windows-log-investigation/screenshots/payload_masking.png)
 
 ### 🧠 Why This Was Suspicious
 
@@ -270,6 +270,7 @@ Analyze outbound network connections
 Correlate events into a meaningful timeline
 
 This investigation demonstrated how Sysmon provides detailed visibility into system activity and how analysts use that data to detect potential security threats.
+
 
 
 
