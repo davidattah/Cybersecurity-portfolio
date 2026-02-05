@@ -1,10 +1,9 @@
 # Windows Log Investigation 
 
-
 ## Overview
 This project documents a SOC-style investigation using Sysmon logs in a Windows environment.  
-The objective was to identify suspicious activity through process creation, network connections, and persistence indicators.
 
+The objective was to identify suspicious activity through process creation, network connections, and persistence indicators.
 
 ## Tools Used
 - Sysmon
@@ -239,6 +238,7 @@ Analyze outbound network connections
 Correlate events into a meaningful timeline
 
 This investigation demonstrated how Sysmon provides detailed visibility into system activity and how analysts use that data to detect potential security threats.
+
 
 
 
