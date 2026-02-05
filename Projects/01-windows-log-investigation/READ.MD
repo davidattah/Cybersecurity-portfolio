@@ -115,7 +115,7 @@ Timestamp
 
 This information helps determine whether a process was expected or unusual.
 
-![path_payload](screenshots/path_payload.png)
+![path_payload](https://github.com/davidattah/Cybersecurity-portfolio/blob/main/Projects/01-windows-log-investigation/screenshots/path_payload%20.png)
 
 ### 🔎 Step 2 — Identify the Suspicious Process
 
@@ -272,6 +272,7 @@ Analyze outbound network connections
 Correlate events into a meaningful timeline
 
 This investigation demonstrated how Sysmon provides detailed visibility into system activity and how analysts use that data to detect potential security threats.
+
 
 
 
