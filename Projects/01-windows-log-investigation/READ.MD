@@ -174,8 +174,6 @@ Network activity is critical in investigations because malware often communicate
 
 ### 🔎 Step 2 — Identify Suspicious Network Traffic
 
-🔎 Step 2 — Identify Suspicious Network Traffic
-
 I reviewed Sysmon network events to identify potentially malicious outbound connections, focusing on:
 
 Connections to unusual external IP addresses
@@ -287,6 +285,7 @@ Analyze outbound network connections
 Correlate events into a meaningful timeline
 
 This investigation demonstrated how Sysmon provides detailed visibility into system activity and how analysts use that data to detect potential security threats.
+
 
 
 
