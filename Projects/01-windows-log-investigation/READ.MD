@@ -174,36 +174,49 @@ Network activity is critical in investigations because malware often communicate
 
 ### 🔎 Step 2 — Identify Suspicious Network Traffic
 
-I reviewed network events to identify:
+🔎 Step 2 — Identify Suspicious Network Traffic
+
+I reviewed Sysmon network events to identify potentially malicious outbound connections, focusing on:
 
 Connections to unusual external IP addresses
 
-Non-standard ports
+Non-standard destination ports
 
-Unexpected processes making outbound connections
+Unexpected processes initiating outbound network activity
 
-Processes that are not normally network-facing but initiate connections are commonly investigated.
+Processes that are not typically network-facing but initiate external connections are commonly flagged for investigation.
 
-📸 Screenshot: Suspicious outbound connection
+### 🧠 Why This Activity Was Suspicious
 
-### 🧠 Why This Was Suspicious
+The outbound network activity was considered suspicious for several reasons:
 
-Outbound connections are reviewed because:
+Malware commonly establishes outbound connections to command-and-control (C2) servers to receive instructions or exfiltrate data
 
-Malware often communicates with command-and-control servers
+The destination IP address and connection pattern were not consistent with expected system behavior
 
-Unexpected destinations can indicate compromise
+The process initiating the connection was not expected to communicate externally in this lab environment
+
+In addition to the network activity, further analysis revealed a registry modification associated with the same activity. The payload was stored under:
+
+HKLM\SOFTWARE\Microsoft\Network\Debug
+
+![query_to_get_events](https://github.com/davidattah/Cybersecurity-portfolio/blob/main/Projects/01-windows-log-investigation/screenshots/query_to_get_registry_events.png)
+
+![registry_event_1](https://github.com/davidattah/Cybersecurity-portfolio/blob/main/Projects/01-windows-log-investigation/screenshots/registry_event_1.png)
+
+Registry keys in this location are unusual and can be abused by attackers to store payloads, configuration data, or persistence mechanisms.
 
 The combination of:
 
-The process name
+Suspicious outbound network traffic
 
-The destination IP
+Evidence of communication with a potential C2 server
 
-The timing of the connection
+A registry modification used to store payload data
 
-made this activity worth further analysis.
+![registry_event_2](https://github.com/davidattah/Cybersecurity-portfolio/blob/main/Projects/01-windows-log-investigation/screenshots/registry_event_2.png)
 
+strongly suggested malicious behavior and warranted deeper investigation.
 ### 📌 What I Learned
 
 How Sysmon records network connections
@@ -274,6 +287,7 @@ Analyze outbound network connections
 Correlate events into a meaningful timeline
 
 This investigation demonstrated how Sysmon provides detailed visibility into system activity and how analysts use that data to detect potential security threats.
+
 
 
 
