@@ -109,7 +109,7 @@ The process name
 
 Original File Name
 
-The full path of the payload
+The full path of the exectuable 
 
 This information helps determine whether a process was expected or unusual.
 
@@ -270,6 +270,7 @@ Analyze outbound network connections
 Correlate events into a meaningful timeline
 
 This investigation demonstrated how Sysmon provides detailed visibility into system activity and how analysts use that data to detect potential security threats.
+
 
 
 
