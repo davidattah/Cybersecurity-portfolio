@@ -60,7 +60,7 @@ The Sysmon data was stored in a saved event log file named: Investigation-1.evtx
 
 The query returned a Sysmon Event ID 13 indicating that a registry value had been modified.
 
-![raw_accessed_read.png](Projects/01-windows-log-investigation/screenshots/raw_accessed_read.png)
+![raw_accessed_read.png](https://github.com/davidattah/Cybersecurity-portfolio/blob/main/Projects/01-windows-log-investigation/screenshots/Projects/01-windows-log-investigation/screenshots/raw_accessed_read.png)
 ### Step 4 — Identify USB Device Evidence
 
 Upon reviewing the registry path, I observed keywords such as:
@@ -269,6 +269,7 @@ Analyze outbound network connections
 Correlate events into a meaningful timeline
 
 This investigation demonstrated how Sysmon provides detailed visibility into system activity and how analysts use that data to detect potential security threats.
+
 
 
 
