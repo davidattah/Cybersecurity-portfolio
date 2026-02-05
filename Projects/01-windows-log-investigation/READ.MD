@@ -123,7 +123,7 @@ Its unexpected execution
 
 Its location on disk
 
-Its command-line usage
+The execution payload path masking behind a legitimate path 
 
 Processes running from user-writable directories or unusual paths are often investigated further because malware frequently executes from these locations.
 
@@ -270,6 +270,7 @@ Analyze outbound network connections
 Correlate events into a meaningful timeline
 
 This investigation demonstrated how Sysmon provides detailed visibility into system activity and how analysts use that data to detect potential security threats.
+
 
 
 
