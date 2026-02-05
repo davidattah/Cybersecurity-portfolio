@@ -170,7 +170,7 @@ Process initiating the connection
 
 Network activity is critical in investigations because malware often communicates with external servers.
 
-📸 Screenshot: Sysmon Event ID 3 network connection
+![c2_server_anme](https://github.com/davidattah/Cybersecurity-portfolio/blob/main/Projects/01-windows-log-investigation/screenshots/c2_server_name.png)
 
 ### 🔎 Step 2 — Identify Suspicious Network Traffic
 
@@ -274,6 +274,7 @@ Analyze outbound network connections
 Correlate events into a meaningful timeline
 
 This investigation demonstrated how Sysmon provides detailed visibility into system activity and how analysts use that data to detect potential security threats.
+
 
 
 
