@@ -115,7 +115,7 @@ Timestamp
 
 This information helps determine whether a process was expected or unusual.
 
-📸 Screenshot: Sysmon Event ID 1 example
+![path_payload](screenshots/path_payload.png)
 
 ### 🔎 Step 2 — Identify the Suspicious Process
 
@@ -272,6 +272,7 @@ Analyze outbound network connections
 Correlate events into a meaningful timeline
 
 This investigation demonstrated how Sysmon provides detailed visibility into system activity and how analysts use that data to detect potential security threats.
+
 
 
 
