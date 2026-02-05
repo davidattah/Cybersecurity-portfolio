@@ -52,7 +52,7 @@ They often remain on a system even after activity stops
 
 ### 🔎 Step 2 — Query the Sysmon Log File Using PowerShell
 
-The Sysmon data was stored in a saved event log file named:
+The Sysmon data was stored in a saved event log file named: Investigation-1.evtx
 
 ![full_registry_key_usb_svchost.png](https://github.com/davidattah/Cybersecurity-portfolio/blob/main/Projects/01-windows-log-investigation/screenshots/full_registry_key_usb_svchost.png)
 
@@ -60,7 +60,7 @@ The Sysmon data was stored in a saved event log file named:
 
 The query returned a Sysmon Event ID 13 indicating that a registry value had been modified.
 
-Step 4 — Identify USB Device Evidence
+### Step 4 — Identify USB Device Evidence
 
 Upon reviewing the registry path, I observed keywords such as:
 
@@ -71,13 +71,14 @@ VEN_SANDISK
 These values indicate that a USB storage device was connected to the system.
 Windows creates registry entries under this path when removable USB devices are inserted.
 
-🚨 Why This Activity Was Suspicious
+### 🚨 Why This Activity Was Suspicious
+
 In the context of this lab environment, USB device usage was not expected.
 Because of this, the registry modification indicating a USB connection was treated as suspicious and flagged for further analysis.
 
 Additionally, the registry modification was performed by svchost.exe, a legitimate Windows system process that attackers sometimes abuse to blend malicious activity with normal system behavior.
 
-📌 What I Learned from Investigation 1
+### 📌 What I Learned from Investigation 1
 
 How Sysmon records registry modifications (Event ID 13)
 
@@ -90,12 +91,13 @@ To analyze this file, I used PowerShell’s Get-WinEvent cmdlet, which allows fi
 
 I filtered the log to identify registry activity associated with a system process:
 
-🔎 Investigation 2 — Suspicious Process Activity
-🎯 Objective
+## 🔎 Investigation 2 — Suspicious Process Activity
+
+###🎯 Objective
 
 The goal of Investigation 2 was to analyze process creation events in Sysmon to identify potentially suspicious or abnormal executables.
 
-🔍 Step 1 — Focus on Process Creation Events
+### 🔍 Step 1 — Focus on Process Creation Events
 
 Sysmon Event ID 1 logs process creation. These events show:
 
@@ -111,7 +113,7 @@ This information helps determine whether a process was expected or unusual.
 
 📸 Screenshot: Sysmon Event ID 1 example
 
-🔎 Step 2 — Identify the Suspicious Process
+### 🔎 Step 2 — Identify the Suspicious Process
 
 While reviewing process creation events, I identified a process that stood out due to:
 
@@ -125,7 +127,7 @@ Processes running from user-writable directories or unusual paths are often inve
 
 📸 Screenshot: Suspicious process execution
 
-🧠 Why This Was Suspicious
+### 🧠 Why This Was Suspicious
 
 In normal environments:
 
@@ -135,7 +137,7 @@ Unknown executables in user directories may indicate malicious activity
 
 Because this process did not align with normal system behavior, it was flagged for further investigation.
 
-📌 What I Learned
+### 📌 What I Learned
 
 How to identify process creation events in Sysmon
 
@@ -143,12 +145,12 @@ How command-line arguments provide context
 
 Why parent-child process relationships matter
 
-🔎 Investigation 3 — Network Connections
-🎯 Objective
+## 🔎 Investigation 3 — Network Connections
+### 🎯 Objective
 
 The goal of Investigation 3 was to analyze network connections recorded by Sysmon to identify potentially malicious communication.
 
-🔍 Step 1 — Review Network Connection Events
+### 🔍 Step 1 — Review Network Connection Events
 
 Sysmon Event ID 3 logs network connections, including:
 
@@ -164,7 +166,7 @@ Network activity is critical in investigations because malware often communicate
 
 📸 Screenshot: Sysmon Event ID 3 network connection
 
-🔎 Step 2 — Identify Suspicious Network Traffic
+### 🔎 Step 2 — Identify Suspicious Network Traffic
 
 I reviewed network events to identify:
 
@@ -178,7 +180,7 @@ Processes that are not normally network-facing but initiate connections are comm
 
 📸 Screenshot: Suspicious outbound connection
 
-🧠 Why This Was Suspicious
+### 🧠 Why This Was Suspicious
 
 Outbound connections are reviewed because:
 
@@ -196,7 +198,7 @@ The timing of the connection
 
 made this activity worth further analysis.
 
-📌 What I Learned
+### 📌 What I Learned
 
 How Sysmon records network connections
 
@@ -204,12 +206,12 @@ How to identify abnormal outbound traffic
 
 Why correlating processes with network activity matters
 
-🔎 Investigation 4 — Correlating Events & Building a Timeline
-🎯 Objective
+## 🔎 Investigation 4 — Correlating Events & Building a Timeline
+### 🎯 Objective
 
 The goal of Investigation 4 was to correlate multiple Sysmon events to understand the sequence of activity on the system.
 
-🔍 Step 1 — Correlate Process, Registry, and Network Events
+### 🔍 Step 1 — Correlate Process, Registry, and Network Events
 
 Rather than viewing events in isolation, I reviewed:
 
@@ -241,7 +243,7 @@ Persistence setup
 
 External communication
 
-🧠 Why Correlation Matters
+### 🧠 Why Correlation Matters
 
 Single events can look harmless on their own, but when combined:
 
@@ -253,7 +255,7 @@ They help distinguish normal activity from malicious behavior
 
 This is a core skill for SOC analysts.
 
-✅ Final Conclusion
+## ✅ Final Conclusion
 
 Across all four investigations, I used Sysmon logs and PowerShell to:
 
@@ -266,6 +268,7 @@ Analyze outbound network connections
 Correlate events into a meaningful timeline
 
 This investigation demonstrated how Sysmon provides detailed visibility into system activity and how analysts use that data to detect potential security threats.
+
 
 
 
