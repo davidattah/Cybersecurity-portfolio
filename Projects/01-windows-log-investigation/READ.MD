@@ -62,7 +62,7 @@ The query returned a Sysmon Event ID 13 indicating that a registry value had bee
 
 ![raw_accessed_read.png](https://github.com/davidattah/Cybersecurity-portfolio/blob/main/Projects/01-windows-log-investigation/screenshots/raw_accessed_read.png)
 
-The RawAccessRead event shows that a SYSTEM-level process accessed \Device\HarddiskVolume3. When correlated with registry modification events at the same timestamp, this activity is associated with svchost.exe
+This event shows that a SYSTEM-level process accessed \Device\HarddiskVolume3. When correlated with registry modification events at the same timestamp, this activity is associated with svchost.exe
 
 ### Step 4 — Identify USB Device Evidence
 
@@ -272,6 +272,7 @@ Analyze outbound network connections
 Correlate events into a meaningful timeline
 
 This investigation demonstrated how Sysmon provides detailed visibility into system activity and how analysts use that data to detect potential security threats.
+
 
 
 
