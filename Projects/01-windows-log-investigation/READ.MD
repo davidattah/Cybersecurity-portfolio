@@ -225,55 +225,10 @@ Why correlating processes with network activity matters
 ## 🔎 Investigation 4 — Correlating Events & Building a Timeline
 ### 🎯 Objective
 
-The goal of Investigation 4 was to correlate multiple Sysmon events to understand the sequence of activity on the system.
-
-### 🔍 Step 1 — Correlate Process, Registry, and Network Events
-
-Rather than viewing events in isolation, I reviewed:
-
-Process creation (Event ID 1)
-
-Registry modification (Event ID 13)
-
-Network connections (Event ID 3)
-
-By comparing timestamps, I was able to build a timeline of activity.
-
-📸 Screenshot: Timeline correlation example
-
-🔎 Step 2 — Identify the Attack Flow
-
-By correlating events, I observed:
-
-A process executed on the system
-
-A registry value was modified
-
-A network connection was established shortly afterward
-
-This pattern is commonly reviewed in investigations because it can indicate:
-
-Initial execution
-
-Persistence setup
-
-External communication
-
-### 🧠 Why Correlation Matters
-
-Single events can look harmless on their own, but when combined:
-
-They provide context
-
-They show intent
-
-They help distinguish normal activity from malicious behavior
-
-This is a core skill for SOC analysts.
 
 ## ✅ Final Conclusion
 
-Across all four investigations, I used Sysmon logs and PowerShell to:
+Across all three investigations, I used Sysmon logs and PowerShell to:
 
 Identify suspicious processes
 
@@ -284,6 +239,7 @@ Analyze outbound network connections
 Correlate events into a meaningful timeline
 
 This investigation demonstrated how Sysmon provides detailed visibility into system activity and how analysts use that data to detect potential security threats.
+
 
 
 
