@@ -107,11 +107,7 @@ Sysmon Event ID 1 logs process creation. These events show:
 
 The process name
 
-Command-line arguments
-
-Parent process
-
-Timestamp
+Original File Name
 
 This information helps determine whether a process was expected or unusual.
 
@@ -272,6 +268,7 @@ Analyze outbound network connections
 Correlate events into a meaningful timeline
 
 This investigation demonstrated how Sysmon provides detailed visibility into system activity and how analysts use that data to detect potential security threats.
+
 
 
 
