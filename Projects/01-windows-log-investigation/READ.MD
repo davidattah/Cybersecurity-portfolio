@@ -53,7 +53,8 @@ They often remain on a system even after activity stops
 ### 🔎 Step 2 — Query the Sysmon Log File Using PowerShell
 
 The Sysmon data was stored in a saved event log file named:
-![full_registry_key_usb_svchost.png](https://github.com/davidattah/Cybersecurity-portfolio/blob/main/Projects/01-windows-log- investigation/screenshots/full_registry_key_usb_svchost.png)
+
+![full_registry_key_usb_svchost.png](https://github.com/davidattah/Cybersecurity-portfolio/blob/main/Projects/01-windows-log-investigation/screenshots/full_registry_key_usb_svchost.png)
 
 ### 🔍 Step 3 — Analyze the Registry Modification Event
 
@@ -265,6 +266,7 @@ Analyze outbound network connections
 Correlate events into a meaningful timeline
 
 This investigation demonstrated how Sysmon provides detailed visibility into system activity and how analysts use that data to detect potential security threats.
+
 
 
 
