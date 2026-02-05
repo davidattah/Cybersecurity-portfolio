@@ -139,6 +139,8 @@ Unknown executables in user directories may indicate malicious activity
 
 Because this process did not align with normal system behavior, it was flagged for further investigation.
 
+Furthemore, the host 10.0.2.13 (IEWIN7) is likely compromised, and mshta.exe initiated an outbound TCP connection to 10.0.2.18:4443, which may be the attacker's command and control infrastucture(c2).
+
 ![destination_ip_address.png](https://github.com/davidattah/Cybersecurity-portfolio/blob/main/Projects/01-windows-log-investigation/screenshots/destination_ip_address.png)
 
 ### 📌 What I Learned
@@ -272,6 +274,7 @@ Analyze outbound network connections
 Correlate events into a meaningful timeline
 
 This investigation demonstrated how Sysmon provides detailed visibility into system activity and how analysts use that data to detect potential security threats.
+
 
 
 
