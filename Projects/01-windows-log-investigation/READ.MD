@@ -31,12 +31,13 @@ During analysis, suspicious behavior was observed involving:
 
 ## Investigation Walkthrough
 
-🔎 Investigation 1 — Registry Activity & USB Device Detection
-🎯 Objective
+## 🔎 Investigation 1 — Registry Activity & USB Device Detection
+
+### 🎯 Objective
 
 The goal of Investigation 1 was to analyze Sysmon registry events to determine whether any suspicious registry modifications occurred on the system, with a focus on identifying evidence of removable media usage.
 
-🔍 Step 1 — Identify Relevant Sysmon Event Types
+### 🔍 Step 1 — Identify Relevant Sysmon Event Types
 
 Sysmon logs multiple event types, each identified by an Event ID.
 For this investigation, I focused on Sysmon Event ID 13, which indicates that a registry value was set or modified.
@@ -49,13 +50,12 @@ They may indicate persistence mechanisms
 
 They often remain on a system even after activity stops
 
-🔎 Step 2 — Query the Sysmon Log File Using PowerShell
+### 🔎 Step 2 — Query the Sysmon Log File Using PowerShell
 
 The Sysmon data was stored in a saved event log file named:
-![full_registry_key_usb_svchost.png](https://github.com/davidattah/Cybersecurity-portfolio/blob/main/Projects/01-windows-log-
-investigation/screenshots/full_registry_key_usb_svchost.png)
+![full_registry_key_usb_svchost.png](https://github.com/davidattah/Cybersecurity-portfolio/blob/main/Projects/01-windows-log- investigation/screenshots/full_registry_key_usb_svchost.png)
 
-🔍 Step 3 — Analyze the Registry Modification Event
+### 🔍 Step 3 — Analyze the Registry Modification Event
 
 The query returned a Sysmon Event ID 13 indicating that a registry value had been modified.
 
@@ -265,6 +265,7 @@ Analyze outbound network connections
 Correlate events into a meaningful timeline
 
 This investigation demonstrated how Sysmon provides detailed visibility into system activity and how analysts use that data to detect potential security threats.
+
 
 
 
