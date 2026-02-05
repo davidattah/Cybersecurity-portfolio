@@ -139,7 +139,7 @@ Unknown executables in user directories may indicate malicious activity
 
 Because this process did not align with normal system behavior, it was flagged for further investigation.
 
-![destination_ip_address.png] (https://github.com/davidattah/Cybersecurity-portfolio/blob/main/Projects/01-windows-log-investigation/screenshots/destination_ip_address.png)
+![destination_ip_address.png](https://github.com/davidattah/Cybersecurity-portfolio/blob/main/Projects/01-windows-log-investigation/screenshots/destination_ip_address.png)
 
 ### 📌 What I Learned
 
@@ -272,6 +272,7 @@ Analyze outbound network connections
 Correlate events into a meaningful timeline
 
 This investigation demonstrated how Sysmon provides detailed visibility into system activity and how analysts use that data to detect potential security threats.
+
 
 
 
