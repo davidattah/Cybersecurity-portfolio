@@ -99,7 +99,7 @@ I filtered the log to identify registry activity associated with a system proces
 
 The goal of Investigation 2 was to analyze process creation events in Sysmon to identify potentially suspicious or abnormal executables.
 
-### 🔍 Step 1 — Focus on Process Creation Events
+### Step 1 — Focus on Process Creation Events
 
 Sysmon Event ID 1 logs process creation. These events show:
 
@@ -234,3 +234,4 @@ Analyze outbound network connections
 Correlate events into a meaningful timeline
 
 This investigation demonstrated how Sysmon provides detailed visibility into system activity and how analysts use that data to detect potential security threats.
+
