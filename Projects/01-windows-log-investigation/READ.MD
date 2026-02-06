@@ -20,7 +20,6 @@ The objective was to identify suspicious activity through process creation, netw
 - Event ID 11– File create
 - Event ID 13 – Registry value set
 
-
 ## Investigation Summary
 During analysis, suspicious behavior was observed involving:
 - Abnormal PowerShell execution
@@ -238,6 +237,7 @@ Analyze outbound network connections
 Correlate events into a meaningful timeline
 
 This investigation demonstrated how Sysmon provides detailed visibility into system activity and how analysts use that data to detect potential security threats.
+
 
 
 
