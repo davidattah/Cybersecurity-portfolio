@@ -29,13 +29,13 @@ During analysis, suspicious behavior was observed involving:
 
 ## Investigation Walkthrough
 
-## 🔎 Investigation 1 — Registry Activity & USB Device Detection
+## Investigation 1 — Registry Activity & USB Device Detection
 
-### 🎯 Objective
+### Objective
 
 The goal of Investigation 1 was to analyze Sysmon registry events to determine whether any suspicious registry modifications occurred on the system, with a focus on identifying evidence of removable media usage.
 
-### 🔍 Step 1 — Identify Relevant Sysmon Event Types
+### Step 1 — Identify Relevant Sysmon Event Types
 
 Sysmon logs multiple event types, each identified by an Event ID.
 For this investigation, I focused on Sysmon Event ID 13, which indicates that a registry value was set or modified.
@@ -48,7 +48,7 @@ They may indicate persistence mechanisms
 
 They often remain on a system even after activity stops
 
-### 🔎 Step 2 — Query the Sysmon Log File Using PowerShell
+### Step 2 — Query the Sysmon Log File Using PowerShell
 
 The Sysmon data was stored in a saved event log file named: Investigation-1.evtx
 
@@ -56,7 +56,7 @@ The Sysmon data was stored in a saved event log file named: Investigation-1.evtx
 
 The query returned a Sysmon Event ID 13 indicating that a registry value had been modified using a removable device
 
-### 🔍 Step 3 — Analyze the Registry Modification Event
+### Step 3 — Analyze the Registry Modification Event
 
 ![raw_accessed_read.png](https://github.com/davidattah/Cybersecurity-portfolio/blob/main/Projects/01-windows-log-investigation/screenshots/raw_accessed_read.png)
 
@@ -73,14 +73,14 @@ VEN_SANDISK
 These values indicate that a USB storage device was connected to the system.
 Windows creates registry entries under this path when removable USB devices are inserted.
 
-### 🚨 Why This Activity Was Suspicious
+### Why This Activity Was Suspicious
 
 In the context of this lab environment, USB device usage was not expected.
 Because of this, the registry modification indicating a USB connection was treated as suspicious and flagged for further analysis.
 
 Additionally, the registry modification was performed by svchost.exe, a legitimate Windows system process that attackers sometimes abuse to blend malicious activity with normal system behavior.
 
-### 📌 What I Learned from Investigation 1
+### What I Learned from Investigation 1
 
 How Sysmon records registry modifications (Event ID 13)
 
@@ -93,9 +93,9 @@ To analyze this file, I used PowerShell’s Get-WinEvent cmdlet, which allows fi
 
 I filtered the log to identify registry activity associated with a system process:
 
-## 🔎 Investigation 2 — Suspicious Process Activity
+## Investigation 2 — Suspicious Process Activity
 
-### 🎯 Objective
+### Objective
 
 The goal of Investigation 2 was to analyze process creation events in Sysmon to identify potentially suspicious or abnormal executables.
 
@@ -113,7 +113,7 @@ This information helps determine whether a process was expected or unusual.
 
 ![path_of_exectuable](https://github.com/davidattah/Cybersecurity-portfolio/blob/main/Projects/01-windows-log-investigation/screenshots/path_of_exectuable.png)
 
-### 🔎 Step 2 — Identify the Suspicious Process
+### Step 2 — Identify the Suspicious Process
 
 While reviewing process creation events, I identified a process that stood out due to:
 
@@ -127,7 +127,7 @@ Processes running from user-writable directories or unusual paths are often inve
 
 ![Payload_masking](https://github.com/davidattah/Cybersecurity-portfolio/blob/main/Projects/01-windows-log-investigation/screenshots/payload_masking.png)
 
-### 🧠 Why This Was Suspicious
+### Why This Was Suspicious
 
 In normal environments:
 
@@ -141,7 +141,7 @@ Furthemore, the host 10.0.2.13 (IEWIN7) is likely compromised, and mshta.exe ini
 
 ![destination_ip_address.png](https://github.com/davidattah/Cybersecurity-portfolio/blob/main/Projects/01-windows-log-investigation/screenshots/destination_ip_address.png)
 
-### 📌 What I Learned
+### What I Learned
 
 How to identify process creation events in Sysmon
 
@@ -149,8 +149,9 @@ How command-line arguments provide context
 
 Why parent-child process relationships matter
 
-## 🔎 Investigation 3 — Network Connections
-### 🎯 Objective
+## Investigation 3 — Network Connections
+
+### Objective
 
 The goal of Investigation 3 was to analyze network connections recorded by Sysmon to identify potentially malicious communication.
 
@@ -170,7 +171,7 @@ Network activity is critical in investigations because malware often communicate
 
 ![c2_server_anme](https://github.com/davidattah/Cybersecurity-portfolio/blob/main/Projects/01-windows-log-investigation/screenshots/c2_server_name.png)
 
-### 🔎 Step 2 — Identify Suspicious Network Traffic
+### Step 2 — Identify Suspicious Network Traffic
 
 I reviewed Sysmon network events to identify potentially malicious outbound connections, focusing on:
 
@@ -182,7 +183,7 @@ Unexpected processes initiating outbound network activity
 
 Processes that are not typically network-facing but initiate external connections are commonly flagged for investigation.
 
-### 🧠 Why This Activity Was Suspicious
+### Why This Activity Was Suspicious
 
 The outbound network activity was considered suspicious for several reasons:
 
@@ -212,7 +213,7 @@ A registry modification used to store payload data
 ![registry_event_2](https://github.com/davidattah/Cybersecurity-portfolio/blob/main/Projects/01-windows-log-investigation/screenshots/registry_event_2.png)
 
 Strongly suggested malicious behavior and warranted deeper investigation.
-### 📌 What I Learned
+### What I Learned
 
 How Sysmon records network connections
 
@@ -220,11 +221,7 @@ How to identify abnormal outbound traffic
 
 Why correlating processes with network activity matters
 
-## 🔎 Investigation 4 — Correlating Events & Building a Timeline
-### 🎯 Objective
-
-
-## ✅ Final Conclusion
+## Final Conclusion
 
 Across all three investigations, I used Sysmon logs and PowerShell to:
 
@@ -237,35 +234,3 @@ Analyze outbound network connections
 Correlate events into a meaningful timeline
 
 This investigation demonstrated how Sysmon provides detailed visibility into system activity and how analysts use that data to detect potential security threats.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
