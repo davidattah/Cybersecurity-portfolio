@@ -155,7 +155,7 @@ Why parent-child process relationships matter
 
 The goal of Investigation 3 was to analyze network connections recorded by Sysmon to identify potentially malicious communication.
 
-### 🔍 Step 1 — Review Network Connection Events
+### Step 1 — Review Network Connection Events
 
 Sysmon Event ID 3 logs network connections, including:
 
@@ -234,4 +234,5 @@ Analyze outbound network connections
 Correlate events into a meaningful timeline
 
 This investigation demonstrated how Sysmon provides detailed visibility into system activity and how analysts use that data to detect potential security threats.
+
 
