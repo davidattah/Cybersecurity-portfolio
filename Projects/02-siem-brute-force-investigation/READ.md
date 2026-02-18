@@ -76,6 +76,8 @@ File did not execute
 
 Files quarantined successfully
 
+![Quarantine_files](https://github.com/davidattah/Cybersecurity-portfolio/blob/main/Projects/02-siem-brute-force-investigation/screenshots/quarantine_files.png)
+
 Host 3
 
 Attachment downloaded
@@ -84,7 +86,7 @@ File executed
 
 Required deeper investigation
 
-![Quarantine_files](https://github.com/davidattah/Cybersecurity-portfolio/blob/main/Projects/02-siem-brute-force-investigation/screenshots/quarantine_files.png)
+![Investigate_hosts](https://github.com/davidattah/Cybersecurity-portfolio/blob/main/Projects/02-siem-brute-force-investigation/screenshots/investigate_host.png)
 
 ## Investigation 3 — Timeline Analysis of Infected Host
 
