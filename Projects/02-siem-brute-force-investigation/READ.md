@@ -115,10 +115,9 @@ Command-line activity
 
 Potential command-and-control (C2) communication
 
-You can include your timeline image like this:
-
 ![Execution Timeline](https://github.com/davidattah/Cybersecurity-portfolio/blob/main/Projects/02-siem-brute-force-investigation/screenshots/timeline.png)
-Findings
+
+### Findings
 
 The malicious attachment initiated:
 
@@ -132,7 +131,7 @@ The attack chain followed a common pattern:
 
 Initial Access → Execution → Command & Control
 
-Response Actions Taken
+Response Actions Taken:
 
 Quarantined malicious files
 Isolated affected host
@@ -145,10 +144,38 @@ Phishing Attack
 Malware Execution
 Potential Command & Control Activity
 
-Lessons Learned
+## Lessons Learned:
 
-Strengthen email filtering
-Block malicious domains at DNS level
-Enforce attachment sandboxing
-Improve user phishing awareness training
-Enhance monitoring of command-line activity
+To reduce the likelihood of similar incidents occurring in the future, I recommend implementing the following security improvements
+
+Strengthen Email Filtering
+Implement advanced email filtering and anti-phishing controls to detect and block malicious attachments and spoofed sender domains before they reach end users.
+
+Block Malicious Domains at DNS Level
+Use DNS filtering to prevent endpoints from resolving and communicating with known malicious or suspicious domains, reducing the risk of command-and-control activity.
+
+Enforce Attachment Sandboxing
+Deploy attachment sandboxing to automatically detonate and analyze email attachments in an isolated environment before delivery to users.
+
+Improve User Phishing Awareness Training
+Conduct regular security awareness training to help users identify phishing attempts and report suspicious emails promptly.
+
+Enhance Monitoring of Command-Line Activity
+Increase visibility into command-line execution by enabling detailed logging and alerting for suspicious PowerShell or script-based activity.
+
+
+## Final Conclusion
+
+Across this investigation, I was able to:
+
+Analyze a suspicious email containing a potentially malicious attachment
+
+Respond to endpoint security alerts by quarantining affected files and containing impacted hosts
+
+Conduct a deeper investigation on the host where the file was executed
+
+Perform timeline analysis to understand the attack sequence
+
+Provide security recommendations to reduce the risk of similar incidents occurring in the future
+
+
