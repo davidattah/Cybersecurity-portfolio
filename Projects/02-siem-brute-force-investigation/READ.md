@@ -88,7 +88,7 @@ Required deeper investigation
 
 ## Investigation 3 — Timeline Analysis of Infected Host
 
-###Objective
+### Objective
 
 Understand what occurred after execution of the malicious file.
 
