@@ -171,9 +171,9 @@ To reduce the likelihood of similar incidents occurring in the future, I recomme
 
   Conduct regular security awareness training to help users identify phishing attempts and report suspicious emails promptly.
 
-Enhance Monitoring of Command-Line Activity - 
+- Enhance Monitoring of Command-Line Activity - 
 
-Increase visibility into command-line execution by enabling detailed logging and alerting for suspicious PowerShell or script-based activity.
+  Increase visibility into command-line execution by enabling detailed logging and alerting for suspicious PowerShell or script-based activity.
 
 
 ## Final Conclusion
