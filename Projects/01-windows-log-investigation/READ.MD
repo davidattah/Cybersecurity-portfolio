@@ -213,6 +213,7 @@ A registry modification used to store payload data
 ![registry_event_2](https://github.com/davidattah/Cybersecurity-portfolio/blob/main/Projects/01-windows-log-investigation/screenshots/registry_event_2.png)
 
 Strongly suggested malicious behavior and warranted deeper investigation.
+
 ### What I Learned
 
 How Sysmon records network connections
@@ -234,5 +235,6 @@ Analyze outbound network connections
 Correlate events into a meaningful timeline
 
 This investigation demonstrated how Sysmon provides detailed visibility into system activity and how analysts use that data to detect potential security threats.
+
 
 
