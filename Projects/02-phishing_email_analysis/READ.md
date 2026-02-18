@@ -51,7 +51,7 @@ Social engineering elements
 
 The attachment was downloaded for analysis.
 
-![Email_attachment](https://github.com/davidattah/Cybersecurity-portfolio/blob/main/Projects/02-siem-brute-force-investigation/screenshots/email_attachment.png)
+![Email_attachment](https://github.com/davidattah/Cybersecurity-portfolio/blob/main/Projects/02-phishing_email_analysis/screenshots/email_attachment.png)
 
 
 ## Investigation 2 — Malware Alert & Initial Response
@@ -64,7 +64,7 @@ Step 1 — Review Security Alert
 
 An endpoint security alert indicated malware detection on the host after the attachment download.
 
-![Malware_detected](https://github.com/davidattah/Cybersecurity-portfolio/blob/main/Projects/02-siem-brute-force-investigation/screenshots/malware_detected.png)
+![Malware_detected](https://github.com/davidattah/Cybersecurity-portfolio/blob/main/Projects/02-phishing_email_analysis/screenshots/malware_detected.png)
 
 Two scenarios were identified:
 
@@ -76,7 +76,7 @@ File did not execute
 
 Files quarantined successfully
 
-![Quarantine_files](https://github.com/davidattah/Cybersecurity-portfolio/blob/main/Projects/02-siem-brute-force-investigation/screenshots/quarantine_files.png)
+![Quarantine_files](https://github.com/davidattah/Cybersecurity-portfolio/blob/main/Projects/02-phishing_email_analysis/screenshots/quarantine_files.png)
 
 Host 3
 
@@ -86,7 +86,7 @@ File executed
 
 Required deeper investigation
 
-![Investigate_hosts](https://github.com/davidattah/Cybersecurity-portfolio/blob/main/Projects/02-siem-brute-force-investigation/screenshots/investigate_host.png)
+![Investigate_hosts](https://github.com/davidattah/Cybersecurity-portfolio/blob/main/Projects/02-phishing_email_analysis/screenshots/investigate_host.png)
 
 ## Investigation 3 — Timeline Analysis of Infected Host
 
@@ -117,7 +117,7 @@ Command-line activity
 
 Potential command-and-control (C2) communication
 
-![Execution Timeline](https://github.com/davidattah/Cybersecurity-portfolio/blob/main/Projects/02-siem-brute-force-investigation/screenshots/timeline.png)
+![Execution Timeline](https://github.com/davidattah/Cybersecurity-portfolio/blob/main/Projects/02-phishing_email_analysis/screenshots/timeline.png)
 
 ### Findings
 
