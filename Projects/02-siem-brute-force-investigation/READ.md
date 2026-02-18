@@ -155,21 +155,21 @@ Potential Command & Control Activity
 
 To reduce the likelihood of similar incidents occurring in the future, I recommend implementing the following security improvements: 
 
-Strengthen Email Filtering - 
+- Strengthen Email Filtering - 
 
-Implement advanced email filtering and anti-phishing controls to detect and block malicious attachments and spoofed sender domains before they reach end users.
+  Implement advanced email filtering and anti-phishing controls to detect and block malicious attachments and spoofed sender domains before they reach end users.
 
-Block Malicious Domains at DNS Level - 
+- Block Malicious Domains at DNS Level - 
 
-Use DNS filtering to prevent endpoints from resolving and communicating with known malicious or suspicious domains, reducing the risk of command-and-control activity.
+  Use DNS filtering to prevent endpoints from resolving and communicating with known malicious or suspicious domains, reducing the risk of command-and-control activity.
 
-Enforce Attachment Sandboxing - 
+- Enforce Attachment Sandboxing - 
 
-Deploy attachment sandboxing to automatically detonate and analyze email attachments in an isolated environment before delivery to users.
+  Deploy attachment sandboxing to automatically detonate and analyze email attachments in an isolated environment before delivery to users.
 
-Improve User Phishing Awareness Training - 
+- Improve User Phishing Awareness Training - 
 
-Conduct regular security awareness training to help users identify phishing attempts and report suspicious emails promptly.
+  Conduct regular security awareness training to help users identify phishing attempts and report suspicious emails promptly.
 
 Enhance Monitoring of Command-Line Activity - 
 
