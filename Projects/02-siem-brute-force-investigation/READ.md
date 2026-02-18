@@ -134,8 +134,11 @@ Initial Access → Execution → Command & Control
 Response Actions Taken:
 
 Quarantined malicious files
+
 Isolated affected host
+
 Prevented further execution
+
 Preserved logs for analysis
 
 Incident Classification
