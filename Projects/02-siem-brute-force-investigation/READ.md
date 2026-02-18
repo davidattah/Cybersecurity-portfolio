@@ -151,7 +151,7 @@ Potential Command & Control Activity
 
 ## Lessons Learned:
 
-To reduce the likelihood of similar incidents occurring in the future, I recommend implementing the following security improvements
+To reduce the likelihood of similar incidents occurring in the future, I recommend implementing the following security improvements: 
 
 Strengthen Email Filtering - 
 
