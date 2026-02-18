@@ -131,7 +131,7 @@ The attack chain followed a common pattern:
 
 Initial Access → Execution → Command & Control
 
-Response Actions Taken:
+### Response Actions Taken:
 
 Quarantined malicious files
 
@@ -141,10 +141,12 @@ Prevented further execution
 
 Preserved logs for analysis
 
-Incident Classification
+### Incident Classification
 
 Phishing Attack
+
 Malware Execution
+
 Potential Command & Control Activity
 
 ## Lessons Learned:
